@@ -1,6 +1,6 @@
 ﻿namespace NLayer.Core.UnitOfWork
 {
-    internal interface IUnitOfWork
+    public interface IUnitOfWork
     {
         Task CommitAsync();
         void Commit();
