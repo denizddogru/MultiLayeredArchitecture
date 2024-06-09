@@ -5,7 +5,7 @@ namespace NLayer.Core.Repositories;
 public interface IGenericRepository<T> where T : class
 {
     Task<T> GetByIdAsync(int id);
-    IQueryable<T> GetAll(Expression<Func<T, bool>> expression);
+    IQueryable<T> GetAll();
     //Tolist, ToListAsync gibi metodları çağrırken döner
     // productRepository.where(x => x.Id>5).OrderBy.ToListAsync();
     IQueryable<T> Where(Expression<Func<T, bool>> expression);
