@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NLayer.Core;
-using System.Drawing;
+using NLayer.Core.Models;
 using System.Reflection;
 
 namespace NLayer.Repository

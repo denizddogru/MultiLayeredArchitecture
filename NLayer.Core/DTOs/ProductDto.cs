@@ -1,12 +1,9 @@
-﻿namespace NLayer.Core;
+﻿namespace NLayer.Core.DTOs;
 
-public class Product : BaseEntity
+public class ProductDto : BaseEntityDto
 {
-
     public string Name { get; set; } = null!;
     public int Stock { get; set; }
     public decimal Price { get; set; }
     public int CategoryId { get; set; }
-    public Category Category { get; set; }
-    public ProductFeature? ProductFeature { get; set; }
 }
