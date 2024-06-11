@@ -13,6 +13,7 @@ public class MapProfile : Profile
         CreateMap<Category, CategoryDto>().ReverseMap();
         CreateMap<ProductFeature, ProductFeatureDto>().ReverseMap();
         CreateMap<ProductUpdateDto, Product>();
+        CreateMap<Product, ProductWithCategoryDto>().ReverseMap();
 
     }
 }
