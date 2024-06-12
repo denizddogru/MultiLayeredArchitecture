@@ -6,7 +6,7 @@ public class CustomResponseDto<T>
 {
     public T Data { get; set; }
 
-    public List<String> Errors { get; set; }
+    public List<string> Errors { get; set; }
 
     [JsonIgnore]
     public int StatusCode { get; set; }
@@ -21,7 +21,7 @@ public class CustomResponseDto<T>
         return new CustomResponseDto<T> { StatusCode = statusCode };
     }
 
-    public static CustomResponseDto<T> Fail(int statusCode, List<String> errors)
+    public static CustomResponseDto<T> Fail(int statusCode, List<string> errors)
     {
         return new CustomResponseDto<T> { StatusCode = statusCode, Errors = errors };
     }
