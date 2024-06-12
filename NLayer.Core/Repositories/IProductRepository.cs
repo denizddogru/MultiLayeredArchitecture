@@ -1,7 +1,6 @@
 ﻿using NLayer.Core.Models;
-using NLayer.Core.Repositories;
 
-namespace NLayer.Repository.Repositories;
+namespace NLayer.Core.Repositories;
 
 public interface IProductRepository : IGenericRepository<Product>
 {
