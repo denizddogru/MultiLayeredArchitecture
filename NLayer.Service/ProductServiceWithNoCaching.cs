@@ -4,15 +4,14 @@ using NLayer.Core.Models;
 using NLayer.Core.Repositories;
 using NLayer.Core.Services;
 using NLayer.Core.UnitOfWork;
-using NLayer.Repository.Repositories;
 
 namespace NLayer.Service;
 
-public class ProductService : Service<Product>, IProductService
+public class ProductServiceWithNoCaching : Service<Product>, IProductService
 {
     private readonly IProductRepository _productRepository;
     private readonly IMapper _mapper;
-    public ProductService(IGenericRepository<Product> repository, IUnitOfWork unitOfWork, IMapper mapper, IProductRepository productRepository) : base(repository, unitOfWork)
+    public ProductServiceWithNoCaching(IGenericRepository<Product> repository, IUnitOfWork unitOfWork, IMapper mapper, IProductRepository productRepository) : base(repository, unitOfWork)
     {
         _mapper = mapper;
         _productRepository = productRepository;

@@ -28,7 +28,7 @@ public class ProductServiceWithCaching : IProductService
         // sadece bu cache key'ine ait data var mı yok mu diye memory'ye baktık. Alt-tire memory'de yer kaplamıyor.
         if(!_memoryCache.TryGetValue(CacheProductKey, out _)) 
         {
-            _memoryCache.Set(CacheProductKey, _repository.GetAll().ToList());
+            _memoryCache.Set(CacheProductKey, _repository.GetProductsWithCategory().Result);
         }
 
     }
