@@ -20,8 +20,9 @@ DB : Sql Server Management Studio 19
    - Tools -> Package Manager Console
    - In the pop-up screen below, select from Default Project: NLayer-Repository
 
-     Add-Migration InitialMigration ( if this step is successfull the migrations folder will be created in the repository folder)
-     Update-Database ( This command will generate Up,Down methods)
+     Add-Migration InitialMigration ( if this step is successfull the migrations folder and the Up-Down methods will be created in the repository folder)
+     
+     Update-Database ( This command will apply the contents of the Up method to the db)
 
 
      If you have managed to complete these steps, you have successfully connected to your local database and now able to  start making requests from Postman
